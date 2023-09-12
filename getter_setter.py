@@ -4,8 +4,12 @@ from tkinter import ttk
 
 def button_func():
     # get the content of the entry
-    print(entry.get())
+    entry_text = entry.get()
 
+    # update  the label
+    # label.config(text="some other text")
+    label["text"] = entry_text
+    entry["state"] = "disabled"
 
 # window
 window = tk.Tk()
@@ -20,6 +24,9 @@ entry.pack()
 
 button = ttk.Button(master=window, text="The button", command=button_func)
 button.pack()
+
+# exercise
+# add another button that changes text back to "some text" and that enables entry
 
 # run
 window.mainloop()
