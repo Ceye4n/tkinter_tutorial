@@ -1,9 +1,11 @@
 import tkinter as tk
 from tkinter import ttk
 
+
 def button_func():
     # get the content of the entry
     print(entry.get())
+
 
 # window
 window = tk.Tk()
